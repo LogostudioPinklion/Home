@@ -27,7 +27,6 @@ Es un sitio estático (HTML, CSS y JavaScript) listo para publicarse con **GitHu
 | --- | --- |
 | `js/pagos-config.js` | Tus enlaces de PayPal, Mercado Pago y Stripe, el anticipo (50 %) y el descuento por pago completo (10 %). |
 | `js/agenda-config.js` | Tu enlace de Calendly o Google Calendar para agendar citas (opcional). |
-| `aviso-de-privacidad.html` | Completa tu domicilio y la fecha donde están los corchetes. |
 | `plantilla-caso.html` | Plantilla para documentar un caso de portafolio. Duplícala por cada proyecto. |
 | `img/trabajos/` | Portadas de los proyectos de portafolio. |
 
@@ -43,7 +42,6 @@ como-trabajamos.html    Proceso, pagos y preguntas frecuentes
 estudio.html            Biografía
 contacto.html           Cotización y agenda de citas (por WhatsApp)
 factura.html            Solicitud de factura CFDI 4.0
-aviso-de-privacidad.html
 404.html
 css/estilos.css
 js/sitio.js

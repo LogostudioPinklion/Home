@@ -796,3 +796,9 @@ table.compare { width: 100%; min-width: 760px; border-collapse: collapse; font-s
   .footer-grid > div:nth-child(2) { grid-row: span 2; }
   .footer-grid > div:last-child { grid-column: 2; }
 }
+.site-footer a.footer-cta, .site-footer a.footer-cta:visited { color: var(--color-pink-700); background: var(--color-paper); }
+.site-footer a.footer-cta:hover, .site-footer a.footer-cta:focus-visible { color: var(--color-ink); background: var(--color-sun-500); }
+/* Las marcas de registro no deben empujar la página hacia los lados */
+.page-head { overflow-x: clip; }
+/* Opciones de pago con área táctil de 24 px */
+.plan__opt input { width: 1.5rem; height: 1.5rem; }
