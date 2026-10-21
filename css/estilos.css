@@ -684,3 +684,23 @@ table.compare { width: 100%; min-width: 760px; border-collapse: collapse; font-s
   .nav__wa:hover { text-decoration: underline; }
   body.menu-open .wa-float { display: none; }
 }
+
+/* Logo en el pie de página: la caja rosa del catálogo con la carita como sticker */
+.brand--footer {
+  position: relative; background: var(--color-pink-700); color: var(--color-paper);
+  border-radius: var(--radius-md); padding: var(--space-3) var(--space-5) var(--space-3) var(--space-4);
+  box-shadow: 0 12px 26px -14px rgb(0 0 0 / .5);
+}
+.brand--footer .brand__name { font-size: 1.9rem; }
+.brand__smile { position: absolute; top: -18px; right: -18px; width: 44px; height: 44px; }
+.card-blue h2, .card-blue h3 { color: var(--color-paper); }
+
+/* Logo en imagen (encabezado y pie) */
+.brand__logo { display: block; height: 3.5rem; width: auto; }
+@media (max-width: 599px) { .brand__logo { height: 3rem; } }
+.brand--footer .brand__logo { height: 5rem; }
+.brand { padding-block: var(--space-2); }
+
+/* Contraste: sobre amarillo el texto va en tinta (8.9:1); el rosa daba 4.2:1 */
+.art__sticker b, .guarantee__seal b, .sticker b { color: var(--color-ink); }
+.package__price strong.package__quote { font-size: 1.5rem; }
