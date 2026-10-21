@@ -704,3 +704,30 @@ table.compare { width: 100%; min-width: 760px; border-collapse: collapse; font-s
 /* Contraste: sobre amarillo el texto va en tinta (8.9:1); el rosa daba 4.2:1 */
 .art__sticker b, .guarantee__seal b, .sticker b { color: var(--color-ink); }
 .package__price strong.package__quote { font-size: 1.5rem; }
+
+
+/* Menú compacto: panel a la derecha en tablet y laptop, sin tapar toda la página */
+@media (max-width: 1199px) {
+  .site-header__bar { position: relative; }
+  .nav { box-shadow: 0 0 0 100vmax rgb(43 37 71 / .3); max-height: calc(100dvh - 6rem); }
+}
+@media (min-width: 600px) and (max-width: 1199px) {
+  .nav {
+    left: auto; right: max(var(--space-6), env(safe-area-inset-right, 0px)); top: calc(100% - var(--space-2));
+    width: 21rem; border-radius: var(--radius-lg);
+    padding: var(--space-3) var(--space-5) var(--space-5);
+    clip-path: none;
+    box-shadow: 0 24px 48px -16px rgb(43 37 71 / .55);
+  }
+  .nav__link { font-size: 1rem; min-height: 48px; }
+}
+@media (max-width: 599px) {
+  .nav__link { font-size: 1.0625rem; min-height: 50px; }
+  .nav__cta { margin-top: var(--space-4); }
+}
+
+/* Logo del pie sin caja: blanco directo sobre el azul */
+.brand--footer { background: none; box-shadow: none; padding: 0 var(--space-6) 0 0; border-radius: 0; }
+.brand--footer .brand__smile { top: -14px; right: 0; width: 36px; height: 36px; }
+.brand--footer { padding-right: 2.75rem; }
+.brand--footer .brand__smile { top: -6px; right: 0; width: 34px; height: 34px; }
