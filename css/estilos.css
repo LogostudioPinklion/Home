@@ -752,3 +752,47 @@ table.compare { width: 100%; min-width: 760px; border-collapse: collapse; font-s
 .wa-float { width: 56px; height: 56px; min-height: 0; padding: 0; justify-content: center; border-radius: 50%; }
 .wa-float svg { width: 26px; height: 26px; }
 .compare-details > summary { margin-bottom: var(--space-3); }
+
+/* Servicio destacado a todo lo ancho (artículos promocionales) */
+.service--wide { grid-column: 1 / -1; border: 2px solid var(--color-pink-100); }
+.service__cta { display: grid; gap: var(--space-3); justify-items: start; }
+.service--wide .btn { margin-top: 0; }
+@media (min-width: 768px) {
+  .service--wide { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: var(--space-6); align-items: center; padding: var(--space-6); }
+  .service__cta { justify-items: center; }
+}
+
+/* ===== Pie de página: jerarquía tipográfica más ligera que el contenido =====
+   Texto y enlaces 16 px (mínimo de cuerpo), títulos 13-14 px en mayúsculas,
+   notas legales 14 px. Antes los enlaces medían 18 px, igual que el contenido. */
+.site-footer { font-size: 1rem; line-height: 1.55; padding-block: var(--space-8) var(--space-5); }
+.footer-grid { gap: var(--space-7) var(--space-6); }
+.footer-grid h2 { font-size: .8125rem; line-height: 1.4; letter-spacing: .1em; margin-bottom: var(--space-3); }
+.footer-grid li a {
+  display: inline-flex; align-items: center; gap: var(--space-2); min-height: 40px;
+  font-weight: 500; text-decoration: none; color: var(--color-paper);
+}
+.footer-grid li a:hover { color: var(--color-sun-500); text-decoration: underline; text-underline-offset: .25em; }
+.footer-grid li a .icon { width: 1.15rem; height: 1.15rem; }
+.footer-brand { gap: var(--space-4); }
+.footer-brand p { max-width: 34ch; color: var(--color-blue-100); }
+.footer-cta { min-height: 44px; }
+.footer-bottom {
+  margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid rgb(255 250 246 / .25);
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-3); font-size: var(--text-sm); color: var(--color-blue-100);
+}
+.footer-top { color: var(--color-paper); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; min-height: 32px; }
+.footer-top:hover { color: var(--color-sun-500); }
+@media (min-width: 1024px) { .footer-grid { grid-template-columns: 2.2fr 1fr 1fr 1fr; } }
+@media (max-width: 767px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-grid > div:last-child { grid-column: 1 / -1; }
+}
+.site-footer .footer-cta { color: var(--color-pink-700); justify-self: start; }
+.site-footer .footer-cta:hover { color: var(--color-ink); }
+@media (max-width: 767px) {
+  .footer-grid { row-gap: var(--space-5); }
+  .footer-grid > div:nth-child(2) { grid-row: span 2; }
+  .footer-grid > div:last-child { grid-column: 2; }
+}
