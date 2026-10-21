@@ -73,8 +73,8 @@
         <div class="art" aria-hidden="true">
           <div class="art__blob"></div>
           <div class="art__card"><span class="art__card-logo">Tu <b>marca</b></span><i></i><i></i></div>
+          <div class="art__sticker sticker"></div>
           <div class="art__cup"><div class="art__lid"></div><div class="art__body"><div class="art__sleeve"><svg viewBox="0 0 40 40"><use href="#i-smile"/></svg></div></div></div>
-          <div class="art__sticker sticker">hecho con<b>personalidad</b></div>
           <div class="art__tag">etiquetas<br>· vinil ·</div>
           <svg class="art__spark" style="right:2%;top:0" viewBox="0 0 40 40"><use href="#i-spark"/></svg>
           <svg class="art__spark" style="left:0;top:46%;width:8%" viewBox="0 0 40 40"><use href="#i-spark"/></svg>
@@ -141,19 +141,22 @@
         </div>
         <div class="packages">
         <article class="package">
-          <span class="pill" aria-hidden="true">Ultra basic</span>
+          <span class="pill" aria-hidden="true">Esencial</span>
           <div class="package__card">
-            <h3>Just a logo, please</h3>
+            <h3>Solo mi logo</h3>
             <p class="package__for">Para quien solo necesita su logotipo y lo básico</p>
-            <ul class="package__list">
+            <details class="package__details" open>
+              <summary>Qué incluye</summary>
+              <ul class="package__list">
               <li>Logotipo principal y secundarios</li>
               <li>Paleta de colores</li>
               <li>Tipografías</li>
               <li>Manual de identidad básico</li>
-            </ul>
+              </ul>
+            </details>
             <p class="package__price"><strong>$6,099</strong><span>MXN, IVA incluido</span></p>
-            <p class="package__deal">o <strong>$5,489.10</strong> pagando completo (10 % menos)</p>
-            <a class="btn btn--primary package__buy" href="pagar.html?paquete=Just%20a%20logo%2C%20please">Lo quiero<span class="visually-hidden">: paquete Just a logo, please</span></a>
+            <p class="package__deal">o <strong>$5,489</strong> pagando completo (10 % menos)</p>
+            <a class="btn btn--primary package__buy" href="pagar.html?paquete=Solo%20mi%20logo">Lo quiero<span class="visually-hidden">: paquete Solo mi logo</span></a>
             <p class="package__pay"><svg aria-hidden="true" focusable="false"><use href="#i-smile"/></svg>Pago en 2 parcialidades</p>
           </div>
         </article>
@@ -162,14 +165,17 @@
           <div class="package__card">
             <h3>Cafecito Negro</h3>
             <p class="package__for">Para la cafetería que va a abrir</p>
-            <ul class="package__list">
+            <details class="package__details" open>
+              <summary>Qué incluye</summary>
+              <ul class="package__list">
               <li>Logotipo</li>
               <li>Paleta de colores</li>
               <li>Tipografías</li>
               <li>Manual de identidad básico</li>
               <li>Diseño de menú impreso</li>
               <li>Diseño de anuncio exterior</li>
-            </ul>
+              </ul>
+            </details>
             <p class="package__price"><strong>$7,170</strong><span>MXN, IVA incluido</span></p>
             <p class="package__deal">o <strong>$6,453</strong> pagando completo (10 % menos)</p>
             <a class="btn btn--primary package__buy" href="pagar.html?paquete=Cafecito%20Negro">Lo quiero<span class="visually-hidden">: paquete Cafecito Negro</span></a>
@@ -181,7 +187,9 @@
           <div class="package__card">
             <h3>Logo + identidad para Instagram</h3>
             <p class="package__for">Para el negocio que vende por redes</p>
-            <ul class="package__list">
+            <details class="package__details" open>
+              <summary>Qué incluye</summary>
+              <ul class="package__list">
               <li>Logotipo principal y secundarios</li>
               <li>Paleta de colores</li>
               <li>Tipografías</li>
@@ -191,9 +199,10 @@
               <li>6 plantillas para publicaciones del feed (Canva)</li>
               <li>Guía de estética visual</li>
               <li>Linktree con tus enlaces principales</li>
-            </ul>
+              </ul>
+            </details>
             <p class="package__price"><strong>$11,643</strong><span>MXN, IVA incluido</span></p>
-            <p class="package__deal">o <strong>$10,478.70</strong> pagando completo (10 % menos)</p>
+            <p class="package__deal">o <strong>$10,479</strong> pagando completo (10 % menos)</p>
             <a class="btn btn--primary package__buy" href="pagar.html?paquete=Logo%20%2B%20identidad%20para%20Instagram">Lo quiero<span class="visually-hidden">: paquete Logo + identidad para Instagram</span></a>
             <p class="package__pay"><svg aria-hidden="true" focusable="false"><use href="#i-smile"/></svg>Pago en 2 parcialidades</p>
           </div>
@@ -276,7 +285,7 @@
     </div>
   </footer>
 
-  <a class="wa-float" href="https://wa.me/523335594742" target="_blank" rel="noopener"><svg class="" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>WhatsApp<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+  <a class="wa-float" href="https://wa.me/523335594742" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp (se abre en otra pestaña)"><svg class="" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg></a>
   <script src="js/sitio.js" defer></script>
 </body>
 </html>

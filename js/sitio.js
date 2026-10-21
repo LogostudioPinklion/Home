@@ -30,6 +30,13 @@
     nav.addEventListener('click', function (e) {
       if (e.target.closest('a')) close(false);
     });
+    /* Se cierra al tocar fuera del menú y al pasar a pantalla grande */
+    document.addEventListener('click', function (e) {
+      if (nav.classList.contains('is-open') && !nav.contains(e.target) && !toggle.contains(e.target)) close(false);
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 1200 && nav.classList.contains('is-open')) close(false);
+    });
   }
 
   /* Botones de copiar */
@@ -197,7 +204,7 @@
   if (pedido && pks.some(function (p) { return p.id === pedido; })) sel.value = pedido;
   if (q.get('plan') === 'completo') document.getElementById('plan-completo').checked = true;
 
-  var r2 = function (n) { return Math.round(n * 100) / 100; };
+  var r2 = function (n) { return Math.round(n); }; /* montos en pesos enteros */
   var fmt = function (n) { var d = n % 1 ? 2 : 0; return '$' + n.toLocaleString('es-MX', { minimumFractionDigits: d, maximumFractionDigits: 2 }) + ' MXN'; };
   var wa = 'https://wa.me/523335594742?text=';
   var show = function (el, href) { if (href) { el.href = href; el.hidden = false; } else { el.hidden = true; el.removeAttribute('href'); } };
@@ -286,4 +293,11 @@
     form.hidden = true; ok.hidden = false; ok.querySelector('h2').focus();
     window.open(url, '_blank', 'noopener');
   });
+})();
+
+
+/* En celular, la lista de cada paquete empieza cerrada para que la página sea más corta */
+(function () {
+  if (window.innerWidth >= 600) return;
+  document.querySelectorAll('.package__details[open]').forEach(function (d) { d.removeAttribute('open'); });
 })();

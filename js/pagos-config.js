@@ -17,7 +17,7 @@ window.PINKLION_PAGOS = {
   descuentoPagoCompleto: 0.1,   // 10 % de descuento si paga el 100 % en el primer pago
 
   enlaces: {
-    'Just a logo, please':             { mercadopago: '', stripe: '', mercadopagoCompleto: '', stripeCompleto: '' },
+    'Solo mi logo':                    { mercadopago: '', stripe: '', mercadopagoCompleto: '', stripeCompleto: '' },
     'Branding':                        { mercadopago: '', stripe: '', mercadopagoCompleto: '', stripeCompleto: '' },
     'Cafecito Negro':                  { mercadopago: '', stripe: '', mercadopagoCompleto: '', stripeCompleto: '' },
     'Capuchino':                       { mercadopago: '', stripe: '', mercadopagoCompleto: '', stripeCompleto: '' },

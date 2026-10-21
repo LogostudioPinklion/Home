@@ -731,3 +731,24 @@ table.compare { width: 100%; min-width: 760px; border-collapse: collapse; font-s
 .brand--footer .brand__smile { top: -14px; right: 0; width: 36px; height: 36px; }
 .brand--footer { padding-right: 2.75rem; }
 .brand--footer .brand__smile { top: -6px; right: 0; width: 34px; height: 34px; }
+
+
+/* Lista de paquete desplegable (solo se pliega en celular) */
+.package__details { margin-top: var(--space-4); }
+.package__details > summary {
+  list-style: none; cursor: pointer; display: none; justify-content: space-between; align-items: center;
+  min-height: 48px; padding: 0 var(--space-4); border-radius: var(--radius-md);
+  background: var(--color-lilac-100); color: var(--color-blue-700); font-weight: 600;
+}
+.package__details > summary::-webkit-details-marker { display: none; }
+.package__details > summary::after { content: "+"; font: 600 1.4rem/1 var(--font-body); }
+.package__details[open] > summary::after { content: "–"; }
+.package__details .package__list { margin-top: var(--space-3); }
+@media (max-width: 599px) { .package__details > summary { display: flex; } }
+@media (min-width: 600px) { .package__details > .package__list { margin-top: 0; } }
+.package__from { display: block; font-size: var(--text-sm); color: var(--color-ink-2); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+
+/* WhatsApp flotante: solo el ícono, en círculo */
+.wa-float { width: 56px; height: 56px; min-height: 0; padding: 0; justify-content: center; border-radius: 50%; }
+.wa-float svg { width: 26px; height: 26px; }
+.compare-details > summary { margin-bottom: var(--space-3); }
